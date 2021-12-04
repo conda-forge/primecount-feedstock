@@ -1,4 +1,4 @@
-{% set version = "7.1" %}
+{% set version = "7.2" %}
 
 package:
   name: primecount
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://github.com/kimwalisch/primecount/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4f156f3945b613c9262156a25255f689abcaf30fff778c1d27b17126fcd1db72
+  sha256: 54c1eec33e665a780002dda20cf39ba0cefa8e846fdeda44734fb2265cba9257
 
 build:
   number: 0
   run_exports:
     - {{ pin_subpackage('primecount', max_pin='x.x') }}
-  skip: True   # [win]
+  skip: true  # [win]
 
 requirements:
   build:
