@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ "$target_platform" == "linux-"* && "${cxx_compiler_version}" == "9" ]]; then
+    export CXXFLAGS="$CXXFLAGS -std=c++14"
+fi
+
 cmake ${CMAKE_ARGS} \
     -DBUILD_STATIC_LIBS=OFF \
     -DBUILD_SHARED_LIBS=ON \
