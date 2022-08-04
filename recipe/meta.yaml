@@ -22,7 +22,7 @@ requirements:
     - make         # [unix]
     - ninja        # [win]
     - libgomp      # [linux]
-    - llvm-openmp  # [osx and win]
+    - llvm-openmp  # [osx or win]
     - clang        # [win]
   host:
     - primesieve
