@@ -9,7 +9,7 @@ source:
   sha256: 6362887e80e849dd1c396ccec773e5a3a7904371b46f1d495d320d31f9c1ae28
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('primecount', max_pin='x.x') }}
   skip: true  # [win]
