@@ -1,11 +1,11 @@
-About primecount
-================
+About primecount-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/primecount-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/kimwalisch/primecount
 
 Package license: BSD-2-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/primecount-feedstock/blob/main/LICENSE.txt)
 
 Summary: Fast prime counting function implementations
 
