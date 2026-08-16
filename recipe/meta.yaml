@@ -1,4 +1,4 @@
-{% set version = "8.4" %}
+{% set version = "8.7" %}
 
 package:
   name: primecount
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/kimwalisch/primecount/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c7bf47c041bfe4c3912a0d503ea44c1bb6c9003427c12574a6b497748b387612
+  sha256: 5a19eccca337da9e1cc629f2a223890af08987bc21771b9e860e28d823006be3
   patches:
     - fix-to_chars-macos.patch  # [osx]
 
