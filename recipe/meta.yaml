@@ -1,4 +1,4 @@
-{% set version = "8.4" %}
+{% set version = "8.6" %}
 
 package:
   name: primecount
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/kimwalisch/primecount/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c7bf47c041bfe4c3912a0d503ea44c1bb6c9003427c12574a6b497748b387612
+  sha256: f394a0e57e129db6440373fa10ca9744cc0de14d0718d1aa073f1434fd87189a
   patches:
     - fix-to_chars-macos.patch  # [osx]
 
@@ -35,7 +35,7 @@ test:
     - test -f "${PREFIX}/include/primecount.h"  # [unix]
     - test -f "${PREFIX}/lib/libprimecount${SHLIB_EXT}"  # [unix]
     - if not exist %PREFIX%\\Library\\include\\primecount.h exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\primecount.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\primecount_static.lib exit 1  # [win]
 
     # Test CLIs.
     - primecount 1e5
