@@ -35,7 +35,7 @@ test:
     - test -f "${PREFIX}/include/primecount.h"  # [unix]
     - test -f "${PREFIX}/lib/libprimecount${SHLIB_EXT}"  # [unix]
     - if not exist %PREFIX%\\Library\\include\\primecount.h exit 1  # [win]
-    - if not exist %PREFIX%\\Library\\lib\\primecount.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\lib\\primecount_static.lib exit 1  # [win]
 
     # Test CLIs.
     - primecount 1e5
