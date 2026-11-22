@@ -11,7 +11,7 @@ source:
     - fix-to_chars-macos.patch  # [osx]
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('primecount', max_pin='x.x') }}
 
@@ -36,6 +36,7 @@ test:
     - test -f "${PREFIX}/lib/libprimecount${SHLIB_EXT}"  # [unix]
     - if not exist %PREFIX%\\Library\\include\\primecount.h exit 1  # [win]
     - if not exist %PREFIX%\\Library\\lib\\primecount_static.lib exit 1  # [win]
+    - if not exist %PREFIX%\\Library\\bin\\primecount.dll exit 1  # [win]
 
     # Test CLIs.
     - primecount 1e5
